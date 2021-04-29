@@ -129,12 +129,10 @@ header {
   border-radius: 200px;
   background: rgb(255, 255, 255);
   animation: slideRight2 0.5s ease-in-out forwards;
-
   z-index: 1;
 }
 .line {
   position: absolute;
-
   z-index: 2;
 }
 .line > li {
@@ -184,4 +182,40 @@ header {
   color: white;
   background-color: black;
   padding: 10px 20px;
+}
+
+.right {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  height: 100vh;
+  margin: 0 100px;
+  z-index: 20;
+}
+.s-media {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  justify-content: center;
+}
+.s-media a {
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: black;
+}
+.nav-arrows {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav-arrows div {
+  margin-bottom: 30px;
+}
+.previous {
+  color: rgba(0, 0, 0, 0.5);
+}
+main {
+  display: flex;
+  justify-content: space-between;
 }

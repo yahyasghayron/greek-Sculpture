@@ -99,6 +99,22 @@ header {
     opacity: 1;
   }
 }
+@keyframes slideRight2 {
+  0% {
+    transform: translate(-60%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes slidetop {
+  0% {
+    transform: translate(-50%, -40%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
 .bg {
   margin: 0 100px;
   z-index: -1;
@@ -112,6 +128,8 @@ header {
   height: 400px;
   border-radius: 200px;
   background: rgb(255, 255, 255);
+  animation: slideRight2 0.5s ease-in-out forwards;
+
   z-index: 1;
 }
 .line {
@@ -135,6 +153,7 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: slidetop 0.5s ease-in-out forwards;
 }
 .circle::after {
   content: "G";
@@ -143,4 +162,26 @@ header {
   top: -50%;
   left: 35%;
   font-size: 550px;
+}
+.left {
+  position: relative;
+  width: 300px;
+  margin: 200px 100px;
+  z-index: 20;
+}
+.left h1 {
+  font-size: 50px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+.left p {
+  margin: 50px 0;
+  font-size: 14px;
+}
+.book {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
 }

@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <!-- Head -->
+<!-- Head -->
+
 <head>
     <meta charset="utf-8">
     <title>Greek - Museum</title>
     <link rel="stylesheet" href="style.css">
 </head>
-    <!-- Body -->
+<!-- Body -->
+
 <body>
+    <div class="bg">
+        <div class="circle"></div>
+        <ul class="line">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+    </div>
     <header id="header">
-        <a href="#" class="logo"><b>Greek</b>Museum</a>
+        <a href="#" class="logo"><span> Greek </span> <span> Museum </span></a>
         <div class="toggle" onclick="Menu();"></div>
-            <ul class="navbar">
-                <li><a href="#" style="--i:1;">Home</a></li>
-                <li><a href="#" style="--i:2;">History</a></li>
-                <li><a href="#" style="--i:3;">Location</a></li>
-                <li><a href="#" style="--i:4;">About Us </a></li>
-            </ul>
+        <ul class="navbar">
+            <li><a href="#" style="--i:1;">Home</a></li>
+            <li><a href="#" style="--i:2;">History</a></li>
+            <li><a href="#" style="--i:3;">Location</a></li>
+            <li><a href="#" style="--i:4;">About Us </a></li>
+        </ul>
     </header>
+    <main>
+        <div class="left"></div>
+        <div class="center">
+            <img class="sculpture" src="/assets/sculpture1.png" alt="sculpture">
+        </div>
+        <div class="right"></div>
+    </main>
     <script>
-        function Menu(){
+        function Menu() {
             const menuToggle = document.querySelector('.toggle');
             const navbar = document.querySelector('.navbar');
             menuToggle.classList.toggle('active');

@@ -1,93 +1,146 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-body{
-    background: #fff;
-    min-height: 100vh;
+body {
+  background: rgb(241, 240, 240);
+  min-height: 100vh;
 }
-header
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 100px;
-    padding: 20px 100px;
-    z-index: 1000;
-    align-items: center;
-    background: #fff;
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  padding: 20px 100px;
+  z-index: 1000;
+  align-items: center;
+  background: none;
 }
-.logo{
-    position: relative;
-    height: 60px;
-    line-height: 60px;
-    font-size: 2em;
-    letter-spacing: 2px;
-    text-decoration: none;
-    color:black;
-    display: flex;
-    padding-left: 20px;
+.logo {
+  position: relative;
+  height: 60px;
+
+  font-size: 2em;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  padding-left: 20px;
+  flex-direction: column;
 }
-.toggle{
-    position: relative;
-    
-    width: 30px;
-    height: 30px;
-    background: url(assets/menu.png);
-    background-size: 30px;
-    background-position:center ;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    z-index: 10000;
+.logo > span:first-child {
+  font-weight: bold;
+  text-transform: uppercase;
 }
-.toggle.active{
-    background: url(assets/close.png);
-    background-size: 20px;
-    background-position:center ;
-    background-repeat: no-repeat;
-    cursor: pointer;
+.logo > span:last-child {
+  position: relative;
+  font-size: 24px;
+  top: -30%;
 }
-.navbar{
-    position: absolute;
-    display: flex;
-    right: 150px;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.5s;
+.toggle {
+  position: relative;
+
+  width: 30px;
+  height: 30px;
+  background: url(assets/menu.png);
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 10000;
 }
-.navbar.active{
-    opacity: 1;
-    visibility: visible;
+.toggle.active {
+  background: url(assets/close.png);
+  background-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
-.navbar li
-{
-    list-style: none;
+.navbar {
+  position: absolute;
+  display: flex;
+  right: 150px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
 }
-.navbar li a{
-    color: black;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 0 20px;
-    font-weight: 600;
-    display: inline-block;
+.navbar.active {
+  opacity: 1;
+  visibility: visible;
 }
-.navbar.active li a{
-    animation: slideRight 0.5s ease-in-out forwards;
-    animation-delay: calc(0.2*var(--i));
+.navbar li {
+  list-style: none;
+}
+.navbar li a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0 20px;
+  font-weight: 600;
+  display: inline-block;
+}
+.navbar.active li a {
+  animation: slideRight 0.5s ease-in-out forwards;
+  animation-delay: calc(0.2 * var(--i));
 }
 @keyframes slideRight {
-    0% {
-      transform: translateX(150px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0px);
-      opacity: 1;
-    }
+  0% {
+    transform: translateX(150px);
+    opacity: 0;
   }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.bg {
+  margin: 0 100px;
+  z-index: -1;
+}
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  border-radius: 200px;
+  background: rgb(255, 255, 255);
+  z-index: 1;
+}
+.line {
+  position: absolute;
+
+  z-index: 2;
+}
+.line > li {
+  display: block;
+  list-style: none;
+  display: inline-block;
+  width: 1px;
+  height: 100vh;
+  background: rgba(155, 153, 153, 0.637);
+  margin: 0 100px;
+}
+.sculpture {
+  position: absolute;
+  width: 400px;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle::after {
+  content: "G";
+  font-weight: 400;
+  position: relative;
+  top: -50%;
+  left: 35%;
+  font-size: 550px;
+}

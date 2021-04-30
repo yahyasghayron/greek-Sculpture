@@ -12,6 +12,7 @@ body {
   background: linear-gradient(90deg, #eee 1%, transparent 1%) 1px 0,
     rgb(241, 240, 240);
   background-size: 200px 1px;
+  overflow-y: hidden;
 }
 header {
   position: absolute;

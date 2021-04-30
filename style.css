@@ -8,8 +8,9 @@
 body {
   background: rgb(241, 240, 240);
   min-height: 100vh;
-    /* hadi 9itha f google kadir lines nadyin */
-  background: linear-gradient(90deg, #eee 1%, transparent 1%) 1px 0, #fff;
+  /* hadi 9itha f google kadir lines nadyin */
+  background: linear-gradient(90deg, #eee 1%, transparent 1%) 1px 0,
+    rgb(241, 240, 240);
   background-size: 200px 1px;
 }
 header {
@@ -209,32 +210,32 @@ main {
   display: flex;
   justify-content: space-between;
 }
-.socialM{
+.socialM {
   position: absolute;
   right: 10px;
-  top:40%;
+  top: 40%;
   padding: 0px 90px;
   justify-content: center;
   align-items: center;
   z-index: 2;
-  }
-  .socialM li{
-    list-style: none;
-  }
-  .socialM li a{
-    background: rgb(241, 240, 240);
-    text-decoration: none;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50% ;
-    margin: 15px 0; 
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-  }
-  .socialM li a img{
-    transform: scale(0.6);
-    transition: 0.5s;
-    width: 30px;
-  }
+}
+.socialM li {
+  list-style: none;
+}
+.socialM li a {
+  background: rgb(241, 240, 240);
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 15px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.socialM li a img {
+  transform: scale(0.6);
+  transition: 0.5s;
+  width: 30px;
+}
